@@ -6,11 +6,11 @@ import java.text.SimpleDateFormat;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		Persona luis = new Persona();
 		luis.nombre = "Luis Wilson";
 		luis.altura = 1.62;
-		luis.apePaterno ="Ninacondo";
+		luis.apePaterno = "Ninacondo";
 		luis.apeMaterno = "Condori";
 		luis.celular = "No Tengo";
 		luis.direccion = "jr. 1ro de marzo con el jr. huancane";
@@ -21,18 +21,16 @@ public class Main {
 		luis.sexo = "Maculino";
 		luis.tipoSangre = "O+";
 		luis.vive = true;
-		
+
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		try {
-			luis.fechaNacimiento = sdf.parse("16/09/1956");
+			luis.fechaNacimiento = sdf.parse("16/09/1985");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		
-		
+
 		System.out.println(luis);
-		
-		
+
 	}
 
 }

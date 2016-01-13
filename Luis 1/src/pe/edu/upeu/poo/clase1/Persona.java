@@ -3,7 +3,7 @@ package pe.edu.upeu.poo.clase1;
 import java.util.Date;
 
 public class Persona {
-	
+
 	String nombre;
 	String apePaterno;
 	String apeMaterno;
@@ -18,15 +18,11 @@ public class Persona {
 	String sexo;
 	String estadoCivil;
 	boolean vive;
-	
-	
-	public int getEdad(){
-		return 0;
-	
-		
-		
-	}
 
+	public int getEdad() {
+		return 0;
+
+	}
 
 	@Override
 	public String toString() {
@@ -35,8 +31,5 @@ public class Persona {
 				+ email + ", tipoSangre=" + tipoSangre + ", direccion=" + direccion + ", religion=" + religion
 				+ ", sexo=" + sexo + ", estadoCivil=" + estadoCivil + ", vive=" + vive + "]";
 	}
-	
-	
-	
 
 }
