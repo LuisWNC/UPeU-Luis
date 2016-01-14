@@ -31,7 +31,7 @@ public class Repaso {
 		 * Negacion !
 		 */
 		
-		System.out.println(!false);
+		System.out.println(!true);
 		
 		System.out.println("el IGV es: "+r.calcuIGV(12890));
 		
