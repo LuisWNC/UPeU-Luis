@@ -1,13 +1,13 @@
 package Buscaminas;
 
-import Buscaminas.Cuadro;
-import java.awt.Color;
-import java.awt.event.ActionListener;
+import Buscaminas.Cuadro; //para importar los cuadros
+import java.awt.Color; 
+import java.awt.event.ActionListener; //
 import java.awt.event.ActionEvent;
 public class VentanaPrincipal extends javax.swing.JFrame implements ActionListener {
     
-    int contadorMinas=0;
-    int numeroCuadros=0;
+    int contadorMinas=0; //numero de minas
+    int numeroCuadros=0; //numero de cuadros
     int contador=0;
     /**
      * Creates new form VentanaPrincipal
@@ -151,7 +151,7 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
     }                                        
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 
-        iniciar ();
+        iniciar (); //metodo para iniciar el juego
         this.paintAll(this.getGraphics());
         
     }                                        
@@ -190,26 +190,27 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
             }
         });
     }
+    // metodo de inicio del juego
     
     private void iniciar()
     {
         this.PanelJuego.removeAll();
         int nFil=0, nCol;
-        nFil=Integer.parseInt(this.filas.getText());
-        nCol=Integer.parseInt(this.columnas.getText());
+        nFil=Integer.parseInt(this.filas.getText()); //para el numero de filas
+        nCol=Integer.parseInt(this.columnas.getText()); //para el numero de columnas 
         
-        this.PanelJuego.setLayout(new java.awt.GridLayout(nFil,nCol));
+        this.PanelJuego.setLayout(new java.awt.GridLayout(nFil,nCol)); //cada vez que ejecuto esto obtengo las dimensiones y le puedo añadir cosas
         
         this.numeroCuadros=nFil*nCol;
-        this.contadorMinas=0;
+        this.contadorMinas=0; //para que cuando se reinicie el juego siempre este en cero
         for (int i = 0; i < nFil; i++) 
         {
             for (int j = 0; j < nCol; j++) 
             {
-                Cuadro temp = new Cuadro();
+                Cuadro temp = new Cuadro(); //crear cuadro temporal
                 temp.addActionListener(this);
                 if(temp.estaMinado())
-                    this.contadorMinas++;
+                    this.contadorMinas++; //si 10 de mis 100 cuadros estan minados se quedan 10
                 temp.setVisible(true);
                 this.PanelJuego.add(temp);
             }
