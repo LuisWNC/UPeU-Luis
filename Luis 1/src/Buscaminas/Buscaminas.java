@@ -10,5 +10,4 @@ public class Buscaminas {
         VentanaPrincipal v = new VentanaPrincipal();
         v.setVisible(true);
     }
-    
 }

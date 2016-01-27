@@ -25,7 +25,7 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
         }
         else
         {
-            temp2.setBackground(Color.green);
+            temp2.setBackground(Color.red);
             contador++;
             if((numeroCuadros-contadorMinas)==contador)
             {
